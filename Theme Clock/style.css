@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:300&display=swap');
+
+/* -----default settings----- */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: black;
+    --secondary-color: white;
+}
+
+html.dark {
+    --primary-color: white;
+    --secondary-color: black;
+}
+
+html {
+    transition: all 0.5s ease-in;
+}
+
+html.dark {
+    background-color: #111;
+    color: var(--primary-color);
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* -------------------------- */
+
+.toggle {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 100px;
+    outline: none;
+
+    cursor: pointer;
+}
+
+.clock-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clock{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: #f3b1b17c;
+    border-radius:  50%;
+}
+
+.needle{
+    background-color: var(--primary-color);
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    height: 65px;
+    width: 3px;
+    
+    /* положение относительно чего будем вертеть */
+    transform-origin: bottom center;
+    transition: all 0.5s ease-in;
+}
+
+.needle.hour{
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 120px;
+}
+
+.needle.minute {
+    transform: translate(-50%, -100%) rotate(90deg);
+    height: 180px;
+}
+.needle.seconds {
+    transform: translate(-50%, -100%) rotate(20deg);
+    background-color: #e74c3c;
+    height: 150px;
+    width: 2px;
+}
+
+.center-point {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.center-point::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.time{
+    font-size: 60px;
+}
+
+.date{
+    color: #aaa;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.date .circle{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 18px;
+    transition: all 0.5s ease-in;
+    font-size: 12px;
+}
