@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+/* -----default settings----- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+
+    background-color: rgb(235, 148, 148);
+}
+
+/* -------------------------- */
+
+#toasts{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+
+.toast{
+    border-radius: 5px;
+    background-color: rgb(211, 95, 118);
+    color: white;
+    padding: 15px 10px;
+    margin-bottom: 12px;
+    min-width: 150px;
+    text-align: center;
+}
+
+.btn{
+    border: none;
+    border-radius: 7px;
+    padding: 15px 20px;
+    font-size: 20px;
+}
