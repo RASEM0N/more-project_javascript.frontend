@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+/* -----default settings----- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+    padding-top: 20px;
+}
+
+/* -------------------------- */
+
+i {
+    color: red;
+}
+
+small {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.like {
+    height: 440px;
+    width: 300px;
+    margin: 0 auto;
+    background-image: url('https://images.pexels.com/photos/3265460/pexels-photo-3265460.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+    cursor: pointer;
+    position: relative;
+    border-radius: 3px;
+
+    overflow: hidden;
+}
+
+.like i{
+    position: absolute;
+
+    animation: grow 0.6s linear;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+@keyframes grow{
+    to{
+        transform: translate(-50%, -50%) scale(10);
+        opacity: 0;
+    }
+}
