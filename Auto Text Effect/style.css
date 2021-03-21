@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+/* -----default settings----- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(196, 250, 183);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    padding: 0 50px;
+}
+
+/* -------------------------- */
+
+div{
+    position: absolute;
+    bottom: 20px;
+    background: rgba(0,0,0,0.1);
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h1{
+    font-size: 36px;
+    text-align: justify;
+}
+
+input{
+    width: 50px;
+    font-size: 20px;
+    padding: 5px;
+    border: none;
+    text-align: center;
+    outline: none;
+}
